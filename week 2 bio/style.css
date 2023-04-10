@@ -19,6 +19,15 @@ body{
     border-color: rgb(0, 0, 0);
     padding: 5px;
 }
+#footer{
+    border-bottom: 3px;
+    border-top: 3px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding: 5px;
+}
 #main{
     border-bottom: 3px;
     border-top: 3px;
@@ -27,4 +36,25 @@ body{
     border-style: solid;
     border-color: rgb(0, 0, 0);
     padding: 5px;
+}
+#p{
+    border-bottom: 3px;
+    border-top: 3px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding: 5px;
+}
+a:link{
+    color:blue;
+}
+a:visited{
+    color:blueviolet;
+}
+a:hover{
+    color:aquamarine;
+}
+.pics{
+    max-height: 500px;
 }
