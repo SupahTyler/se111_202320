@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.hide{
+    display:none;
+}
+
+h2{
+    font-size:12px;
+}
+body{
+    background-color:rgba(0, 0, 0, 0);
+}
+#nav{
+    border-bottom: 3px;
+    border-top: 3px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding: 5px;
+}
+#main{
+    border-bottom: 3px;
+    border-top: 3px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding: 5px;
+}
