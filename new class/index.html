@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .hide{ 
+        display:none;
+
+ }
+
+    </style>
+</head>
+<body>
+    <h1>Header</h1>
+    <div id="nav">
+    <a href="#">bio</a>
+    <a href="#">education</a>
+    <a href="#">hobbies</a>
+
+    </div>
+    <div id="main" class="content">
+        <div id="bio">
+            <h2>Bio</h2>
+        </div>
+        <div id="education" class="content">
+            <h2>education</h2>
+        </div>
+        <div id="hobbies" class="content">
+            <h2>hobbies</h2>
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        var a = document.querySelectorAll(`#nav a`);
+        for(let i=0; i<a.length; i++)
+        {
+        a[i].addEventListener('click' , function(e){
+            e.preventDefault();
+
+            var div = document.querySelectorAll(`.content`);
+            for(let i=0; i<div.length; i++)
+            {
+             div[i].classList.add(`hide`);
+            }
+            div[i].classList.remove(`hide`)
+            
+        })
+        }
+    </script>
+</body>
+</html>
