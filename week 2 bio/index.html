@@ -2,80 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W1 Assignment</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"
 </head>
 <body>
-   <h1>Header</h1>
-
-
-   <div id="nav">
-
-    <a href="#">bio</a> 
-    <a href="#">eduation</a> 
-    <a href="#">hobbies</a> 
-   </div>
-
-   <div id="main">
-        <div id="bio" class="content">
-            <h2>Bio</h2>
-            <p><p><b>S</b>ome things about me are i like to play lots of video games
-                <i>t</i>he one im playing the most as of right now is valorant im on the esports team at the school
-                <u>s</u>ome of my other hobbies consist of bowling, volleyball, wrestling and hanging out with my girlfriend. After high school i stopped bowling and doing wrestling as much since i didnt really see my high school friends anymore and the wrestling season ended but i still contine to play volleyball and hangout with my gf.</p>        </div>
-        <div id="ed" class="content">
-            <h2>Education</h2>
-
-            <ol>
-                <li>New England Instition of Technology</li>
-                <li>Woonsocket Public High School</li>
-            <li> <a href="https://www.uri.edu/">Univertiy of Rhode Island</a> </li>
-
-            </ol>
-
-        </div>
-        <div id="hobbies" class="content">
-            <h2>Hobbies</h2>
-
-            <ol>
-                <ul>Gaming</ul>
-                <ul>Reading Manhwa</ul>
-                <ul>Hanging out with gf</ul>
-            </ol>        
-            <img src="images/unknown.png" alt="VALORANT CAREAR" class="pics">
-        </div>
-   </div>
+        <h1>Page Full of Important Statistics</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td><b>NAME</b></td>
+                    <td><b>ID</b></td>
+                    <td class="stat">Statistic1</td>
+                    <td class="stat">Statistic2</td>
+                    <td class="stat">Statistic3</td>
+                    <td class="stat">Statistic4</td>
+                    <td class="stat">Statistic5</td>
+                    <td class="stat">Statistic6</td>
+                    <td ><b>AVERAGE</b></td>
+                    <td ><b>TOTAL</b></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>ID</td>
+                    <td class="stat">s1</td>
+                    <td class="stat">s2</td>
+                    <td class="stat">s3</td>
+                    <td class="stat">s4</td>
+                    <td class="stat">s5</td>
+                    <td class="stat">s6</td>
+                    <td>AVG</td>
+                    <td>TOT</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     <script>
-        var a = document.querySelectorAll(`#nav a`);
-        
-        for(let i=0; i<a.length; i++)
+        var body = document.querySelector(`tbody`)
+        console.log(body)
+        var content = ``
+       
+        var numOfStats = 6
+        var numOfPeople = 50 
+
+        for(let i=0; i<numOfPeople; i++)
         {
-            a[i].addEventListener(`click`, function(e){
-                e.preventDefault();
+            var avg = 0
+            var total = 0
+            var id = ``
+           
+            
+            for(let j=0; j<numOfStats; j++)
+            {
+                id+= Math.floor(Math.random()*9.9).toString()
+            }
 
-                var div = document.querySelectorAll(`.content`);
+            content += `<tr>`
 
-                for(let i=0; i<div.length; i++)
+                content += `<td><b>Dude ${i}</b></td>`
+                content += `<td><b>${id}</b></td>` 
+                
+                for(let j=0; j<numOfStats; j++)
                 {
-                    div[i].classList.add(`hide`);
+                    var stat = Math.floor(Math.random()*100.9)
+                    content += `<td class="stat">${stat}</td>`
+                    total += stat
                 }
 
-               div[i].classList.remove(`hide`);
-                
-            })
+                avg = total/numOfStats
+                content += `<td><b>${avg.toFixed(2)}</b></td>`
+                content += `<td><b>${total}</b></td>`
+
+            content += `</tr>`
         }
-
-      
+        body.innerHTML = content
+        
     </script>
-   <div id="footer" class="border">
-
-    <p>&copy; ©2020 Tyler Uttley | W2 Assignment  </p>
-    <br>
-
-</div><!--/ #footer-->
-
-</div><!--/ #wrapper-->
-
 </body>
 </html>
